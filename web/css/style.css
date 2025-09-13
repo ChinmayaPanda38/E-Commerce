@@ -1,0 +1,83 @@
+/* General body setup */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Form box */
+.form-box {
+    background: white;
+    padding: 25px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    width: 320px;
+}
+
+/* Heading */
+h2 {
+    margin-bottom: 15px;
+    text-align: center;
+    color: #333;
+}
+
+/* Input fields */
+.input-field {
+    margin-bottom: 15px;
+}
+
+.input-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #444;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Buttons */
+button {
+    display: block;         /* ensures button is centered in form */
+    width: 100%;            /* full width same as inputs */
+    padding: 10px;
+    background: #4285f4;
+    border: none;
+    color: white;
+    font-size: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-top: 10px;       /* space above button */
+}
+
+button:hover {
+    background: #3367d6;
+}
+
+/* Links & small text */
+p {
+    margin-top: 10px;
+    font-size: 13px;
+    text-align: center;
+    color: #555;
+}
+
+a {
+    color: #4285f4;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

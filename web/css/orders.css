@@ -1,0 +1,252 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f5f7;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background: #343a40;
+    color: #fff;
+    padding: 12px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Navigation - Updated style */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    background: #6c757d;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: none;
+    display: inline-block;
+}
+
+nav a:hover {
+    background: #5a6268;
+    transform: translateY(-1px);
+}
+
+nav a.active {
+    background: #28a745;
+}
+
+nav a.active:hover {
+    background: #218838;
+}
+
+nav a.logout {
+    background: #dc3545;
+    margin-left: 8px;
+}
+
+nav a.logout:hover {
+    background: #c82333;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    margin: 20px 30px;
+    font-size: 0.9rem;
+    color: #555;
+}
+.breadcrumb a {
+    text-decoration: none;
+    color: #007bff;
+}
+.breadcrumb span {
+    color: #555;
+}
+
+/* Main Section */
+main {
+    flex: 1; /* ensures footer stays at bottom */
+    padding: 20px 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+/* Orders Grid */
+.orders-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.order-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.order-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.order-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #343a40;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.order-card p {
+    margin: 8px 0;
+    line-height: 1.5;
+}
+
+/* Status Tags */
+.delivered {
+    color: #28a745;
+    font-weight: bold;
+    background: rgba(40, 167, 69, 0.1);
+    padding: 2px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 0.9rem;
+}
+
+.processing {
+    color: #ffc107;
+    font-weight: bold;
+    background: rgba(255, 193, 7, 0.1);
+    padding: 2px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 0.9rem;
+}
+
+/* Buttons - updated style like product page */
+.order-card .btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 16px;
+    background: #6c757d;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.order-card .btn:hover {
+    background: #5a6268;
+    transform: translateY(-1px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #343a40;
+    color: white;
+    margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 12px 15px;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+    
+    nav a {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+    
+    main {
+        padding: 15px;
+    }
+    
+    .page-title {
+        font-size: 1.7rem;
+    }
+    
+    .orders-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .order-card {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        margin: 2px;
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+    }
+    
+    .page-title {
+        font-size: 1.5rem;
+    }
+    
+    .order-card h3 {
+        font-size: 1.1rem;
+    }
+    
+    .order-card p {
+        font-size: 0.9rem;
+    }
+}
